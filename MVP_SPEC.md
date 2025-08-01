@@ -107,4 +107,4 @@ theme = "system"
 - M3 Web and Braille. Web extension, ARIA rules, braille, perf tests.
 - M4 Alpha readiness. Signed builds, localization, QA plan, privacy docs.
 
-Generated on 2025-08-01.
+
