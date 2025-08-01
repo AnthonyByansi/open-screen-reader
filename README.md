@@ -9,7 +9,7 @@ Fast, multilingual, and customizable screen reader for everyone.
 
 > Goal: a free and open source screen reader that is quick to respond, light on resources, and friendly to new and advanced users.
 
-Generated on 2025-08-01.
+
 
 ## Contents
 - [Why this project](#why-this-project)
@@ -148,7 +148,7 @@ All contributions are licensed under GPL-3.0-or-later. Use DCO sign off in your 
 We use gettext. Strings will live in `/po`. Translators can open a PR with updated `.po` files or join the translation platform once available.
 
 ## Security
-See [SECURITY.md](SECURITY.md). Report issues to security@your-project.org or by using GitHub Security Advisories if enabled.
+See [SECURITY.md](SECURITY.md). Report issues to [yet] or by using GitHub Security Advisories if enabled.
 
 ## Privacy
 No telemetry by default. Any cloud features are opt in and clearly labeled.
@@ -160,7 +160,7 @@ GPL-3.0-or-later. See [LICENSE](LICENSE).
 This project builds upon great work by eSpeak NG, Piper, Liblouis, BRLTTY, and accessibility APIs such as UI Automation.
 
 ## Community
-- Issues: https://github.com/your-org/your-repo/issues
-- Discussions: https://github.com/your-org/your-repo/discussions
-- Conduct: conduct@your-project.org
-- Security: security@your-project.org
+- Issues: https://github.com/anthonybyansi/issues
+- Discussions: https://github.com/anthonybyansi/open-screen-reader/discussions
+- Conduct: https://github.com/anthonybyansi/open-screen-reader/blob/main/CODE_OF_CONDUCT.md
+- Security: https://github.com/anthonybyansi/open-screen-reader/blob/main/SECURITY.md
