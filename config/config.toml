@@ -1,0 +1,25 @@
+# Default config for Open Screen Reader
+[speech]
+engine = "espeakng"
+rate = 45
+pitch = 50
+volume = 80
+voice = "en-gb"
+
+[braille]
+enabled = true
+table = "en-gb-g2.ctb"
+input = "computer"
+cursor_blink = true
+
+[navigation]
+quicknav_enabled = true
+forms_auto_mode = true
+say_all_chunk_ms = 800
+
+[verbosity]
+mode = "short"
+
+[ui]
+language = "en-GB"
+theme = "system"

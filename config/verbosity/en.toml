@@ -1,0 +1,159 @@
+# Verbosity rules for English
+# Placeholders: $name, $role, $state, $value, $pos, $setsize, $level, $rows, $cols, $percent
+# Modes: short and verbose
+
+[global]
+punctuation = "some"          # none, some, most, all
+say_shortcuts = true          # announce accelerator and access keys on focus
+say_position = true           # announce position in set for tabs, radios, list items
+say_landmarks = "short"       # off, short, verbose
+say_hints = "auto"            # off, auto, verbose
+browse_role_first = false     # in browse mode, speak name before role
+focus_role_first = true       # in focus mode, speak role before name
+
+[order]
+focus = ["role","name","state","value","pos","level","hint"]
+browse = ["name","role","state","value","level"]
+
+[states]
+checked = "checked"
+unchecked = "not checked"
+selected = "selected"
+unselected = "not selected"
+expanded = "expanded"
+collapsed = "collapsed"
+pressed = "pressed"
+required = "required"
+invalid = "invalid"
+readonly = "read only"
+busy = "busy"
+current = "current"
+visited = "visited"
+on = "on"
+off = "off"
+
+[roles]
+# Each role can override focus and browse templates per mode.
+
+[roles.button]
+short.focus = "$role, $name"
+short.browse = "$name, $role"
+verbose.focus = "Button, $name"
+verbose.browse = "$name, button"
+
+[roles.link]
+short.focus = "$role, $name"
+short.browse = "$name, $role"
+verbose.focus = "Link, $name, $state"
+verbose.browse = "$name, link, $state"
+
+[roles.checkbox]
+short.focus = "$role, $name, $state"
+short.browse = "$name, $state, $role"
+verbose.focus = "Checkbox, $name, $state"
+verbose.browse = "$name, checkbox, $state"
+
+[roles.radiobutton]
+short.focus = "$role, $name, $state, $pos"
+short.browse = "$name, $state, $role, $pos"
+verbose.focus = "Radio button, $name, $state, $pos of $setsize"
+verbose.browse = "$name, radio button, $state, $pos of $setsize"
+
+[roles.switch]
+short.focus = "$role, $name, $state"
+short.browse = "$name, $state, $role"
+verbose.focus = "Switch, $name, $state"
+verbose.browse = "$name, switch, $state"
+
+[roles.combobox]
+short.focus = "$role, $name, $state"
+short.browse = "$name, $role, $state"
+verbose.focus = "Combo box, $name, $state, $value"
+verbose.browse = "$name, combo box, $state, $value"
+
+[roles.textbox]
+short.focus = "$role, $name, $state"
+short.browse = "$name, $role"
+verbose.focus = "Edit, $name, $state, $value"
+verbose.browse = "$name, edit"
+
+[roles.slider]
+short.focus = "$role, $name, $value"
+short.browse = "$name, $role, $value"
+verbose.focus = "Slider, $name, $value"
+verbose.browse = "$name, slider, $value"
+
+[roles.progressbar]
+short.focus = "$role, $value"
+short.browse = "$role, $value"
+verbose.focus = "Progress, $percent percent"
+verbose.browse = "Progress, $percent percent"
+
+[roles.tab]
+short.focus = "$role, $name, $pos"
+short.browse = "$name, $role, $pos"
+verbose.focus = "Tab, $name, $pos of $setsize"
+verbose.browse = "$name, tab, $pos of $setsize"
+
+[roles.tablist]
+short.focus = "$role"
+short.browse = "$role"
+verbose.focus = "Tab list"
+verbose.browse = "Tab list"
+
+[roles.menuitem]
+short.focus = "$role, $name"
+short.browse = "$name, $role"
+verbose.focus = "Menu item, $name"
+verbose.browse = "$name, menu item"
+
+[roles.heading]
+short.focus = "Heading level $level, $name"
+short.browse = "Heading level $level, $name"
+verbose.focus = "Heading level $level, $name"
+verbose.browse = "Heading level $level, $name"
+
+[roles.list]
+short.focus = "$role"
+short.browse = "$role"
+verbose.focus = "List"
+verbose.browse = "List"
+
+[roles.listitem]
+short.focus = "$role, $name, $pos"
+short.browse = "$name, $role, $pos"
+verbose.focus = "List item, $name, $pos of $setsize"
+verbose.browse = "$name, list item, $pos of $setsize"
+
+[roles.table]
+short.focus = "$role, $rows by $cols"
+short.browse = "$role, $rows by $cols"
+verbose.focus = "Table, $rows by $cols"
+verbose.browse = "Table, $rows by $cols"
+
+[roles.cell]
+short.focus = "$role, $pos"
+short.browse = "$role, $pos"
+verbose.focus = "Cell, row $pos"
+verbose.browse = "Cell, row $pos"
+
+[roles.grid]
+short.focus = "$role"
+short.browse = "$role"
+verbose.focus = "Grid"
+verbose.browse = "Grid"
+
+[roles.status]
+short.focus = "$role, $name"
+short.browse = "$role, $name"
+verbose.focus = "Status, $name"
+verbose.browse = "Status, $name"
+
+[landmarks]
+banner = "banner"
+navigation = "navigation"
+main = "main"
+complementary = "complementary"
+contentinfo = "content info"
+search = "search"
+region = "region"

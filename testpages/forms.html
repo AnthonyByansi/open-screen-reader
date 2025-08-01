@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Forms</title>
+</head>
+<body>
+<main>
+  <h1>Forms sample</h1>
+  <form>
+    <label for="name">Name <span aria-hidden="true">*</span></label>
+    <input id="name" name="name" required aria-required="true" />
+    <div role="note" id="nameHelp">Enter your full name</div>
+
+    <label for="email">Email</label>
+    <input id="email" name="email" type="email" aria-invalid="true" aria-describedby="emailError" value="invalid@" />
+    <div id="emailError" role="alert">Email is invalid</div>
+
+    <fieldset role="group" aria-labelledby="rg">
+      <legend id="rg">Favorite color</legend>
+      <label><input type="radio" name="color" /> Red</label>
+      <label><input type="radio" name="color" /> Green</label>
+      <label><input type="radio" name="color" /> Blue</label>
+    </fieldset>
+
+    <label><input type="checkbox" checked /> Subscribe to updates</label>
+
+    <label for="pet">Pet</label>
+    <select id="pet" name="pet" aria-label="Pet">
+      <option>Cat</option>
+      <option>Dog</option>
+      <option>Bird</option>
+    </select>
+
+    <button type="submit">Submit</button>
+  </form>
+</main>
+</body>
+</html>

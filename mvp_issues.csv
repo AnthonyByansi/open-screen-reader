@@ -1,0 +1,90 @@
+Title,Body,Labels,Milestone
+Set project license,"Choose a license. Default choice GPLv3. Alternative choices MPL-2.0 or Apache-2.0.
+Deliverables:
+- LICENSE file in repo
+- Short note in README about why we chose this
+Acceptance:
+- License file present and lints pass","type:docs,area:governance",M1 Foundation
+Repository bootstrap and CI,"Create repo layout, .editorconfig, code style, pre-commit hooks, and CI for lint and build on Windows and Linux.
+Acceptance:
+- CI runs on pull request and on main
+- Static checks for C++ or Rust, Python, and Markdown","type:infra,area:build",M1 Foundation
+Core event bus and state store,"Implement a small event bus and a read-only state snapshot for consumers.
+Events: focus_changed, caret_moved, selection_changed, speech_started, speech_stopped, config_updated.
+Acceptance:
+- Unit tests show subscribers receive events within 5 ms in process
+- No global state leaks","type:feature,area:core",M1 Foundation
+Windows UI Automation adapter skeleton,"Create UIA bridge. Subscribe to focus and text events. Map UIA roles to internal roles.
+Acceptance:
+- Changes in focus produce internal focus_changed events
+- Sample console app prints role, name, and value for the focused control","type:feature,area:platform,platform:windows",M1 Foundation
+Text to speech driver with eSpeak NG and Piper,"Add TTS abstraction and drivers for eSpeak NG and Piper. Support rate, pitch, volume, and voice selection.
+Acceptance:
+- Say text from a CLI within 100 ms after call in warm path
+- Basic SSML tags for emphasis, break, and prosody are mapped where possible","type:feature,area:speech",M1 Foundation
+Speech queue and interrupt rules,"Implement a speech queue with priorities and interrupt rules. Support Stop, Pause, Resume, and Say all modes.
+Acceptance:
+- New urgent utterance interrupts current speech within 50 ms
+- Queue tests cover FIFO and priority behavior","type:feature,area:speech",M1 Foundation
+Config service and profiles,"Store settings in human readable format such as TOML. Provide profile import and export.
+Acceptance:
+- Read and write settings in under 10 ms
+- Schema validation and defaults are in place","type:feature,area:config",M1 Foundation
+"Quick navigation keys for headings, links, landmarks","Implement keymap and quick nav for common roles.
+Acceptance:
+- From a test HTML page you can jump to next or previous heading, link, and landmark
+- Works in Chrome and Firefox on Windows with our extension enabled","type:feature,area:nav,platform:windows",M2 Interaction
+Forms mode and reading mode switching,"Add simple mode switching rules for forms vs reading. Expose a toggle key.
+Acceptance:
+- Tabbing into a form control switches to forms mode
+- Arrow keys read text when in reading mode","type:feature,area:nav,platform:windows",M2 Interaction
+Say all for long text,"Implement say all that streams text in chunks with smooth pause and resume.
+Acceptance:
+- Reads a 50 kb HTML document without buffer underruns
+- Stop and resume work instantly","type:feature,area:nav",M2 Interaction
+Settings UI with search,"Build a simple settings window with search. Expose speech, keyboard, braille, and verbosity sections.
+Acceptance:
+- Settings apply without restart
+- Search narrows options as you type","type:feature,area:ui",M2 Interaction
+Onboarding tutorial,"Add a first run tutorial that teaches basic keys and how to open settings.
+Acceptance:
+- Tutorial can be replayed from Help menu
+- Pref is stored to skip next time","type:feature,area:docs",M2 Interaction
+Browser extension scaffold,"Create a Chrome and Firefox extension that exposes a clean accessibility tree and improves verbosity rules where safe.
+Acceptance:
+- Extension communicates with host app via native messaging
+- Versioned protocol documented","type:feature,area:web,platform:windows",M3 Web and Braille
+ARIA role and state verbosity rules,"Define default phrases for common roles and states. Example: checkbox checked, link visited, required, invalid.
+Acceptance:
+- Config flag to choose short or verbose mode
+- Unit tests for 30 common roles and states","type:feature,area:rules",M3 Web and Braille
+Liblouis braille output,"Integrate Liblouis for braille output. Support contractions tables and display routing keys.
+Acceptance:
+- Output matches Liblouis expectations for sample texts
+- Refreshable display shows focus changes","type:feature,area:braille,platform:windows",M3 Web and Braille
+BRLTTY and HID braille device support,"Support BRLTTY where present and HID braille devices on Windows.
+Acceptance:
+- Two devices from the test list work end to end
+- Device hot plug is handled with a helpful spoken message","type:feature,area:braille,platform:windows",M3 Web and Braille
+Performance budget and latency tests,"Add automated latency tests from UIA focus event to audio start. Target under 150 ms.
+Acceptance:
+- CI reports 95th percentile latency under target on reference machine","type:test,area:perf",M3 Web and Braille
+Logging and bug report bundle,"Provide a privacy safe log level and a one click bug report bundle that strips personal data.
+Acceptance:
+- Bundle includes logs, config, and system info with user consent","type:feature,area:infra",M4 Alpha readiness
+Signed builds for Windows,"Produce MSIX or installer with code signing. Document steps.
+Acceptance:
+- Installer passes SmartScreen on a test machine","type:infra,platform:windows",M4 Alpha readiness
+Alpha test plan and matrix,"Write a test matrix that covers Office apps, major browsers, chat apps, and IDEs on Windows.
+Acceptance:
+- Markdown file in docs with clear steps for testers","type:docs,area:qa",M4 Alpha readiness
+Localization framework and first language,"Wire gettext and add one language. Include RTL check.
+Acceptance:
+- Language can be switched at runtime","type:feature,area:l10n",M4 Alpha readiness
+Privacy statement and data policy,"Write a short privacy statement. No telemetry by default. Cloud features are opt in.
+Acceptance:
+- Linked from app Help menu","type:docs,area:governance",M4 Alpha readiness
+Add CODE_OF_CONDUCT.md,Add Contributor Covenant and contact email.,"good first issue,type:docs",M1 Foundation
+Add CONTRIBUTING.md,"Explain repo layout, how to build, how to run tests, and how to propose changes.","good first issue,type:docs",M1 Foundation
+Keymap defaults,"Define key bindings for quick nav, say all, stop, settings, help, and tutorial.","good first issue,type:feature,area:nav",M2 Interaction
+Sample test HTML pages,"Add pages that cover headings, links, forms, tables, and ARIA widgets for local testing.","good first issue,type:test,area:web",M2 Interaction

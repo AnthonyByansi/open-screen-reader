@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>ARIA widgets</title>
+</head>
+<body>
+<main>
+  <h1>ARIA widgets sample</h1>
+
+  <button aria-pressed="false">Toggle</button>
+
+  <div role="checkbox" aria-checked="true" tabindex="0">ARIA checkbox checked</div>
+
+  <div role="switch" aria-checked="false" tabindex="0">ARIA switch off</div>
+
+  <div role="combobox" aria-expanded="false" aria-haspopup="listbox" aria-controls="combo-list" tabindex="0">
+    Fruit
+  </div>
+  <ul id="combo-list" role="listbox" aria-label="Fruits">
+    <li role="option" aria-selected="true">Apple</li>
+    <li role="option">Banana</li>
+    <li role="option">Cherry</li>
+  </ul>
+
+  <div role="tablist" aria-label="Sample tabs">
+    <button role="tab" aria-selected="true" aria-controls="panel-1" id="tab-1">Tab one</button>
+    <button role="tab" aria-selected="false" aria-controls="panel-2" id="tab-2">Tab two</button>
+  </div>
+  <section id="panel-1" role="tabpanel" aria-labelledby="tab-1">
+    <p>Panel one content</p>
+  </section>
+  <section id="panel-2" role="tabpanel" aria-labelledby="tab-2" hidden>
+    <p>Panel two content</p>
+  </section>
+
+  <div role="slider" aria-valuemin="0" aria-valuemax="100" aria-valuenow="25" tabindex="0" aria-label="Volume"></div>
+
+  <div role="status" aria-live="polite">Status area. Updates appear here.</div>
+</main>
+</body>
+</html>

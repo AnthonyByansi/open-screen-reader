@@ -1,0 +1,69 @@
+name: Lint
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  lint:
+    runs-on: ${{ matrix.os }}
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, windows-latest]
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Rust
+        if: ${{ hashFiles('**/Cargo.toml') != '' }}
+        uses: dtolnay/rust-toolchain@stable
+        with:
+          components: rustfmt, clippy
+
+      - name: rustfmt
+        if: ${{ hashFiles('**/Cargo.toml') != '' }}
+        run: cargo fmt --all -- --check
+
+      - name: clippy
+        if: ${{ hashFiles('**/Cargo.toml') != '' }}
+        run: cargo clippy --all-targets --all-features -- -D warnings
+
+      - name: Set up Python
+        if: ${{ hashFiles('**/*.py') != '' }}
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.x'
+
+      - name: Install Python linters
+        if: ${{ hashFiles('**/*.py') != '' }}
+        run: python -m pip install --upgrade pip ruff black
+
+      - name: ruff
+        if: ${{ hashFiles('**/*.py') != '' }}
+        run: ruff check .
+
+      - name: black
+        if: ${{ hashFiles('**/*.py') != '' }}
+        run: black --check .
+
+      - name: Install markdownlint
+        if: ${{ hashFiles('**/*.md') != '' }}
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - name: Run markdownlint
+        if: ${{ hashFiles('**/*.md') != '' }}
+        run: |
+          npm i -g markdownlint-cli
+          markdownlint **/*.md
+
+      - name: C and C++ format check on Ubuntu
+        if: ${{ matrix.os == 'ubuntu-latest' && hashFiles('**/*.{c,cpp,h,hpp}') != '' }}
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y clang-format
+          git ls-files '*.c' '*.cpp' '*.h' '*.hpp' | xargs -r clang-format -style=file --dry-run --Werror

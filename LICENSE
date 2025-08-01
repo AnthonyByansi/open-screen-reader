@@ -1,0 +1,19 @@
+SPDX-License-Identifier: GPL-3.0-or-later
+
+Open Screen Reader
+Copyright (C) 2025 Open Screen Reader contributors
+
+This program is free software. You can redistribute it and or modify it under the terms of the
+GNU General Public License as published by the Free Software Foundation. Either version 3 of the
+License, or any later version, at your option.
+
+This program is distributed in the hope that it will be useful, but without any warranty. This includes
+the implied warranty of merchantability or fitness for a particular purpose. See the GNU General Public License
+for more details.
+
+You should have received a copy of the GNU General Public License along with this program. If not, see
+https://www.gnu.org/licenses/ or write to the Free Software Foundation, Inc., 51 Franklin Street,
+Fifth Floor, Boston, MA 02110-1301, USA.
+
+Note for maintainers: best practice is to include the full text of GPL v3 in this file. I used a short form so we can proceed now.
+I can replace this with the full license text as soon as you confirm GPL-3.0-or-later.

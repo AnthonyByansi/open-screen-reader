@@ -1,0 +1,141 @@
+# Sheria za usemi kwa Kiswahili (sw)
+
+[states]
+checked = "imechaguliwa"
+unchecked = "haijachaguliwa"
+selected = "imechaguliwa"
+unselected = "haijachaguliwa"
+expanded = "imepanuliwa"
+collapsed = "imekunjwa"
+pressed = "imebanwa"
+required = "inahitajika"
+invalid = "si sahihi"
+readonly = "soma tu"
+busy = "inafanya kazi"
+current = "ya sasa"
+visited = "imetembelewa"
+on = "imewashwa"
+off = "imezimwa"
+
+[roles.button]
+short.focus = "kitufe, $name"
+short.browse = "$name, kitufe"
+verbose.focus = "Kitufe, $name"
+verbose.browse = "$name, kitufe"
+
+[roles.link]
+short.focus = "kiungo, $name"
+short.browse = "$name, kiungo"
+verbose.focus = "Kiungo, $name, $state"
+verbose.browse = "$name, kiungo, $state"
+
+[roles.checkbox]
+short.focus = "kisanduku cha kuteua, $name, $state"
+short.browse = "$name, $state, kisanduku cha kuteua"
+verbose.focus = "Kisanduku cha kuteua, $name, $state"
+verbose.browse = "$name, kisanduku cha kuteua, $state"
+
+[roles.radiobutton]
+short.focus = "kitufe cha chaguo, $name, $state, $pos"
+short.browse = "$name, $state, kitufe cha chaguo, $pos"
+verbose.focus = "Kitufe cha chaguo, $name, $state, nafasi $pos kati ya $setsize"
+verbose.browse = "$name, kitufe cha chaguo, $state, nafasi $pos kati ya $setsize"
+
+[roles.switch]
+short.focus = "swichi, $name, $state"
+short.browse = "$name, $state, swichi"
+verbose.focus = "Swichi, $name, $state"
+verbose.browse = "$name, swichi, $state"
+
+[roles.combobox]
+short.focus = "orodha kunjuzi, $name, $state"
+short.browse = "$name, orodha kunjuzi, $state"
+verbose.focus = "Orodha kunjuzi, $name, $state, $value"
+verbose.browse = "$name, orodha kunjuzi, $state, $value"
+
+[roles.textbox]
+short.focus = "kisanduku cha maandishi, $name, $state"
+short.browse = "$name, kisanduku cha maandishi"
+verbose.focus = "Kisanduku cha maandishi, $name, $state, $value"
+verbose.browse = "$name, kisanduku cha maandishi"
+
+[roles.slider]
+short.focus = "kitelezeshi, $name, $value"
+short.browse = "$name, kiselezi, $value"
+verbose.focus = "Kitelezeshi, $name, $value"
+verbose.browse = "$name, kiselezi, $value"
+
+[roles.progressbar]
+short.focus = "mwendo wa maendeleo, $value"
+short.browse = "mwendo wa maendeleo, $value"
+verbose.focus = "Upau wa maendeleo, asilimia $percent"
+verbose.browse = "Upau wa maendeleo, asilimia $percent"
+
+[roles.tab]
+short.focus = "kichupo, $name, $pos"
+short.browse = "$name, kichupo, $pos"
+verbose.focus = "Kichupo, $name, nafasi $pos kati ya $setsize"
+verbose.browse = "$name, kichupo, nafasi $pos kati ya $setsize"
+
+[roles.tablist]
+short.focus = "orodha ya vichupo"
+short.browse = "orodha ya vichupo"
+verbose.focus = "Orodha ya vichupo"
+verbose.browse = "Orodha ya vichupo"
+
+[roles.menuitem]
+short.focus = "kipengee cha menyu, $name"
+short.browse = "$name, kipengee cha menyu"
+verbose.focus = "Kipengee cha menyu, $name"
+verbose.browse = "$name, kipengee cha menyu"
+
+[roles.heading]
+short.focus = "Kichwa kiwango $level, $name"
+short.browse = "Kichwa kiwango $level, $name"
+verbose.focus = "Kichwa kiwango $level, $name"
+verbose.browse = "Kichwa kiwango $level, $name"
+
+[roles.list]
+short.focus = "orodha"
+short.browse = "orodha"
+verbose.focus = "Orodha"
+verbose.browse = "Orodha"
+
+[roles.listitem]
+short.focus = "kipengee cha orodha, $name, $pos"
+short.browse = "$name, kipengee cha orodha, $pos"
+verbose.focus = "Kipengee cha orodha, $name, nafasi $pos kati ya $setsize"
+verbose.browse = "$name, kipengee cha orodha, nafasi $pos kati ya $setsize"
+
+[roles.table]
+short.focus = "jedwali, $rows kwa $cols"
+short.browse = "jedwali, $rows kwa $cols"
+verbose.focus = "Jedwali, $rows kwa $cols"
+verbose.browse = "Jedwali, $rows kwa $cols"
+
+[roles.cell]
+short.focus = "seli, $pos"
+short.browse = "seli, $pos"
+verbose.focus = "Seli, safu $pos"
+verbose.browse = "Seli, safu $pos"
+
+[roles.grid]
+short.focus = "gridi"
+short.browse = "gridi"
+verbose.focus = "Gridi"
+verbose.browse = "Gridi"
+
+[roles.status]
+short.focus = "hali, $name"
+short.browse = "hali, $name"
+verbose.focus = "Hali, $name"
+verbose.browse = "Hali, $name"
+
+[landmarks]
+banner = "bango"
+navigation = "urambazaji"
+main = "kuu"
+complementary = "ya ziada"
+contentinfo = "taarifa ya maudhui"
+search = "tafuta"
+region = "eneo"

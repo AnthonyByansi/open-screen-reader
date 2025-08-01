@@ -1,0 +1,22 @@
+# General
+.DS_Store
+Thumbs.db
+*.log
+
+# Python
+.venv/
+__pycache__/
+
+# Node
+node_modules/
+
+# Rust
+/target/
+
+# CMake
+/build/
+CMakeCache.txt
+CMakeFiles/
+
+# VS Code
+.vscode/

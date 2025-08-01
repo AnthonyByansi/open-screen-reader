@@ -1,0 +1,141 @@
+# Verbosity rules for British English (en-GB)
+
+[states]
+checked = "checked"
+unchecked = "not checked"
+selected = "selected"
+unselected = "not selected"
+expanded = "expanded"
+collapsed = "collapsed"
+pressed = "pressed"
+required = "required"
+invalid = "invalid"
+readonly = "read-only"
+busy = "busy"
+current = "current"
+visited = "visited"
+on = "on"
+off = "off"
+
+[roles.button]
+short.focus = "button, $name"
+short.browse = "$name, button"
+verbose.focus = "Button, $name"
+verbose.browse = "$name, button"
+
+[roles.link]
+short.focus = "link, $name"
+short.browse = "$name, link"
+verbose.focus = "Link, $name, $state"
+verbose.browse = "$name, link, $state"
+
+[roles.checkbox]
+short.focus = "tick box, $name, $state"
+short.browse = "$name, $state, tick box"
+verbose.focus = "Tick box, $name, $state"
+verbose.browse = "$name, tick box, $state"
+
+[roles.radiobutton]
+short.focus = "radio button, $name, $state, $pos"
+short.browse = "$name, $state, radio button, $pos"
+verbose.focus = "Radio button, $name, $state, $pos of $setsize"
+verbose.browse = "$name, radio button, $state, $pos of $setsize"
+
+[roles.switch]
+short.focus = "switch, $name, $state"
+short.browse = "$name, $state, switch"
+verbose.focus = "Switch, $name, $state"
+verbose.browse = "$name, switch, $state"
+
+[roles.combobox]
+short.focus = "drop-down, $name, $state"
+short.browse = "$name, drop-down, $state"
+verbose.focus = "Drop-down, $name, $state, $value"
+verbose.browse = "$name, drop-down, $state, $value"
+
+[roles.textbox]
+short.focus = "edit, $name, $state"
+short.browse = "$name, edit"
+verbose.focus = "Edit, $name, $state, $value"
+verbose.browse = "$name, edit"
+
+[roles.slider]
+short.focus = "slider, $name, $value"
+short.browse = "$name, slider, $value"
+verbose.focus = "Slider, $name, $value"
+verbose.browse = "$name, slider, $value"
+
+[roles.progressbar]
+short.focus = "progress, $value"
+short.browse = "progress, $value"
+verbose.focus = "Progress, $percent percent"
+verbose.browse = "Progress, $percent percent"
+
+[roles.tab]
+short.focus = "tab, $name, $pos"
+short.browse = "$name, tab, $pos"
+verbose.focus = "Tab, $name, $pos of $setsize"
+verbose.browse = "$name, tab, $pos of $setsize"
+
+[roles.tablist]
+short.focus = "tab list"
+short.browse = "tab list"
+verbose.focus = "Tab list"
+verbose.browse = "Tab list"
+
+[roles.menuitem]
+short.focus = "menu item, $name"
+short.browse = "$name, menu item"
+verbose.focus = "Menu item, $name"
+verbose.browse = "$name, menu item"
+
+[roles.heading]
+short.focus = "Heading level $level, $name"
+short.browse = "Heading level $level, $name"
+verbose.focus = "Heading level $level, $name"
+verbose.browse = "Heading level $level, $name"
+
+[roles.list]
+short.focus = "list"
+short.browse = "list"
+verbose.focus = "List"
+verbose.browse = "List"
+
+[roles.listitem]
+short.focus = "list item, $name, $pos"
+short.browse = "$name, list item, $pos"
+verbose.focus = "List item, $name, $pos of $setsize"
+verbose.browse = "$name, list item, $pos of $setsize"
+
+[roles.table]
+short.focus = "table, $rows by $cols"
+short.browse = "table, $rows by $cols"
+verbose.focus = "Table, $rows by $cols"
+verbose.browse = "Table, $rows by $cols"
+
+[roles.cell]
+short.focus = "cell, $pos"
+short.browse = "cell, $pos"
+verbose.focus = "Cell, row $pos"
+verbose.browse = "Cell, row $pos"
+
+[roles.grid]
+short.focus = "grid"
+short.browse = "grid"
+verbose.focus = "Grid"
+verbose.browse = "Grid"
+
+[roles.status]
+short.focus = "status, $name"
+short.browse = "status, $name"
+verbose.focus = "Status, $name"
+verbose.browse = "Status, $name"
+
+[landmarks]
+banner = "banner"
+navigation = "navigation"
+main = "main"
+complementary = "complementary"
+contentinfo = "content info"
+search = "search"
+region = "region"

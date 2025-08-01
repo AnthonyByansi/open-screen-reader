@@ -1,0 +1,69 @@
+# Keymap for Windows
+# Screen reader modifier (SR) defaults to CapsLock. Alternative is Insert.
+# Users can switch in settings. Both can be active if desired.
+
+[modifiers]
+primary = "CapsLock"
+alternate = "Insert"
+
+[global]
+say_all = "SR+Down"
+stop_speech = "SR+S"
+read_current_line = "SR+Up"
+read_current_word = "SR+Ctrl+."
+read_current_char = "SR+Ctrl+,"
+toggle_forms_mode = "SR+Space"
+toggle_browse_single_letter = "SR+;"
+open_settings = "SR+Ctrl+S"
+help = "SR+H"
+read_title = "SR+Ctrl+T"
+read_status = "SR+Ctrl+U"
+cycle_granularity = "SR+Ctrl+G"
+rate_increase = "SR+Ctrl+PageUp"
+rate_decrease = "SR+Ctrl+PageDown"
+volume_up = "SR+Ctrl+Plus"
+volume_down = "SR+Ctrl+Minus"
+toggle_audio_ducking = "SR+Ctrl+D"
+toggle_braille_tether = "SR+Ctrl+B"
+
+[browse.single_letter]
+next_heading = "H"
+prev_heading = "Shift+H"
+next_h1 = "1"
+prev_h1 = "Shift+1"
+next_h2 = "2"
+prev_h2 = "Shift+2"
+next_link = "K"
+prev_link = "Shift+K"
+next_landmark = "D"
+prev_landmark = "Shift+D"
+next_form_field = "F"
+prev_form_field = "Shift+F"
+next_table = "T"
+prev_table = "Shift+T"
+next_graphic = "G"
+prev_graphic = "Shift+G"
+next_list = "L"
+prev_list = "Shift+L"
+next_list_item = "I"
+prev_list_item = "Shift+I"
+next_region = "R"
+prev_region = "Shift+R"
+next_blockquote = "Q"
+prev_blockquote = "Shift+Q"
+
+[browse.navigation]
+line_next = "SR+Right"
+line_prev = "SR+Left"
+word_next = "SR+Ctrl+Right"
+word_prev = "SR+Ctrl+Left"
+char_next = "SR+Alt+Right"
+char_prev = "SR+Alt+Left"
+paragraph_next = "SR+Ctrl+Down"
+paragraph_prev = "SR+Ctrl+Up"
+
+[focus]
+next_item = "SR+Right"
+prev_item = "SR+Left"
+activate = "Enter"
+context_menu = "Shift+F10"

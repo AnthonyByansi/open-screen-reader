@@ -1,0 +1,2 @@
+date,build,unique_testers,issues_opened,issues_closed,p50_focus_to_speech_ms,p95_focus_to_speech_ms,cold_start_ms,idle_mem_mb,crashes_per_day,say_all_pass_rate,braille_devices_tested,survey_responses,csat_avg_1_to_5,notes
+2025-08-19,0.1.0-demo,,,,,,,,,,,,,

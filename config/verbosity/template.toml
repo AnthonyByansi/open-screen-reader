@@ -1,0 +1,143 @@
+# Verbosity localization template
+# Copy this file to a language code like 'fr.toml' or 'sw.toml'
+# Translate the right hand side strings. Keep placeholders like $name, $role intact.
+
+[states]
+checked = ""
+unchecked = ""
+selected = ""
+unselected = ""
+expanded = ""
+collapsed = ""
+pressed = ""
+required = ""
+invalid = ""
+readonly = ""
+busy = ""
+current = ""
+visited = ""
+on = ""
+off = ""
+
+[roles.button]
+short.focus = ""
+short.browse = ""
+verbose.focus = ""
+verbose.browse = ""
+
+[roles.link]
+short.focus = ""
+short.browse = ""
+verbose.focus = ""
+verbose.browse = ""
+
+[roles.checkbox]
+short.focus = ""
+short.browse = ""
+verbose.focus = ""
+verbose.browse = ""
+
+[roles.radiobutton]
+short.focus = ""
+short.browse = ""
+verbose.focus = ""
+verbose.browse = ""
+
+[roles.switch]
+short.focus = ""
+short.browse = ""
+verbose.focus = ""
+verbose.browse = ""
+
+[roles.combobox]
+short.focus = ""
+short.browse = ""
+verbose.focus = ""
+verbose.browse = ""
+
+[roles.textbox]
+short.focus = ""
+short.browse = ""
+verbose.focus = ""
+verbose.browse = ""
+
+[roles.slider]
+short.focus = ""
+short.browse = ""
+verbose.focus = ""
+verbose.browse = ""
+
+[roles.progressbar]
+short.focus = ""
+short.browse = ""
+verbose.focus = ""
+verbose.browse = ""
+
+[roles.tab]
+short.focus = ""
+short.browse = ""
+verbose.focus = ""
+verbose.browse = ""
+
+[roles.tablist]
+short.focus = ""
+short.browse = ""
+verbose.focus = ""
+verbose.browse = ""
+
+[roles.menuitem]
+short.focus = ""
+short.browse = ""
+verbose.focus = ""
+verbose.browse = ""
+
+[roles.heading]
+short.focus = ""
+short.browse = ""
+verbose.focus = ""
+verbose.browse = ""
+
+[roles.list]
+short.focus = ""
+short.browse = ""
+verbose.focus = ""
+verbose.browse = ""
+
+[roles.listitem]
+short.focus = ""
+short.browse = ""
+verbose.focus = ""
+verbose.browse = ""
+
+[roles.table]
+short.focus = ""
+short.browse = ""
+verbose.focus = ""
+verbose.browse = ""
+
+[roles.cell]
+short.focus = ""
+short.browse = ""
+verbose.focus = ""
+verbose.browse = ""
+
+[roles.grid]
+short.focus = ""
+short.browse = ""
+verbose.focus = ""
+verbose.browse = ""
+
+[roles.status]
+short.focus = ""
+short.browse = ""
+verbose.focus = ""
+verbose.browse = ""
+
+[landmarks]
+banner = ""
+navigation = ""
+main = ""
+complementary = ""
+contentinfo = ""
+search = ""
+region = ""

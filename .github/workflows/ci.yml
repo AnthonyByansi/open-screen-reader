@@ -1,0 +1,56 @@
+name: CI build and test
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build-test:
+    name: Build and test
+    runs-on: ${{ matrix.os }}
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, windows-latest]
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Rust
+        if: ${{ hashFiles('**/Cargo.toml') != '' }}
+        uses: dtolnay/rust-toolchain@stable
+
+      - name: Cache cargo
+        if: ${{ hashFiles('**/Cargo.toml') != '' }}
+        uses: actions/cache@v4
+        with:
+          path: |
+            ~/.cargo/registry
+            ~/.cargo/git
+            target
+          key: ${{ runner.os }}-cargo-${{ hashFiles('**/Cargo.lock') }}
+          restore-keys: |
+            ${{ runner.os }}-cargo-
+
+      - name: Build Rust
+        if: ${{ hashFiles('**/Cargo.toml') != '' }}
+        run: cargo build --all --verbose
+
+      - name: Test Rust
+        if: ${{ hashFiles('**/Cargo.toml') != '' }}
+        run: cargo test --all --verbose
+
+      - name: Configure CMake
+        if: ${{ hashFiles('**/CMakeLists.txt') != '' }}
+        run: cmake -S . -B build
+
+      - name: Build CMake project
+        if: ${{ hashFiles('**/CMakeLists.txt') != '' }}
+        run: cmake --build build --config Release
+
+      - name: Run CTest
+        if: ${{ hashFiles('**/CMakeLists.txt') != '' }}
+        run: ctest --test-dir build --output-on-failure -C Release
